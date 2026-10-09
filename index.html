@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="reinigungdeal.ch – Reinigungsofferten für Büro, Kanzlei, Praxis und Zuhause kostenlos vergleichen.">
+<title>reinigungdeal.ch – Reinigungsofferten vergleichen</title>
+<link rel="canonical" href="https://reinigungdeal.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --navy:#0F2A1D; --navy-2:#173826; --blue:#17824A; --blue-d:#106638; --sky:#E1F4E8; --sky-2:#F2FAF5;
+  --bg:#F5F9F6; --card:#FFFFFF; --line:#DCE9E1; --ink:#0F2A1D; --muted:#52685B; --soft:#89A094;
+  --green:#15935A; --green-bg:#E6F6EE; --orange:#D9772B; --orange-bg:#FDF1E6; --red:#E3262F;
+  --r:14px; --r-sm:10px; --shadow:0 1px 2px rgba(15,42,29,.06),0 8px 24px rgba(15,42,29,.06);
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;line-height:1.15;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--blue);text-decoration:none}
+button{font:inherit;cursor:pointer}
+input,select,textarea{font:inherit;color:var(--ink)}
+:focus-visible{outline:3px solid rgba(31,157,87,.35);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:20px}
+.ic{display:inline-flex;width:22px;height:22px;flex:none}
+.ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-flex;flex-direction:column;line-height:1;color:var(--navy);font-weight:800;letter-spacing:-.03em}
+.logo b{font-size:25px;font-weight:800}
+.logo b span{color:var(--blue)}
+.logo small{font-size:8.5px;letter-spacing:.32em;font-weight:600;color:var(--muted);margin-top:4px}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:70px}
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav a{white-space:nowrap;color:var(--muted);font-weight:600;font-size:14px;padding:8px 10px;border-radius:8px}
+.nav a:hover{color:var(--navy);background:var(--sky-2)}
+.top .spacer{flex:1}
+.switch{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px}
+.switch button{border:0;background:transparent;padding:7px 14px;border-radius:999px;font-weight:700;font-size:13px;color:var(--muted);white-space:nowrap}
+.switch button.on{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font-weight:700;font-size:15px;transition:transform .15s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 16px rgba(31,157,87,.28)}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #B9DEC8}
+.btn-ghost:hover{border-color:var(--blue)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-sm{padding:9px 14px;font-size:14px;border-radius:10px}
+.btn-lg{padding:16px 26px;font-size:16px}
+.btn .ic{width:18px;height:18px}
+
+/* ---------- Generic sections ---------- */
+section.sec{padding-block:84px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.sec-head{max-width:640px;margin-bottom:40px;display:grid;gap:12px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17px}
+.hand{font-family:"Caveat","Segoe Script",cursive;font-size:26px;color:var(--navy);line-height:1.1}
+
+/* ---------- Hero (Kunden) ---------- */
+.hero{position:relative;padding-block:56px 72px;background:
+  radial-gradient(1200px 500px at 85% -10%, #DCE8FF 0%, rgba(220,232,255,0) 60%),
+  linear-gradient(180deg,#FFFFFF 0%, var(--bg) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(0,540px);gap:48px;align-items:start}
+.hero h1{font-size:clamp(40px,5.6vw,68px);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{font-size:19px;color:var(--muted);margin-top:18px;max-width:30em}
+.hero-points{display:grid;gap:12px;margin-top:28px}
+.hero-points li{display:flex;gap:12px;align-items:center;font-weight:600}
+.hero-points .ic{width:28px;height:28px;padding:5px;border-radius:8px;background:var(--sky);color:var(--blue)}
+ul.clean{list-style:none;margin:0;padding:0}
+.rating{display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap}
+.stars{color:#F5B301;letter-spacing:2px;font-size:17px}
+.rating strong{font-size:17px}
+.rating .muted{color:var(--muted);font-size:14px}
+.avatars{display:flex}
+.avatars span{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-8px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff}
+.avatars span:first-child{margin-left:0}
+.swiss{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.24em;font-weight:700;color:var(--muted);margin-top:28px}
+.cross{width:18px;height:18px;background:var(--red);border-radius:3px;position:relative;flex:none}
+.cross:before,.cross:after{content:"";position:absolute;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%)}
+.cross:before{width:10px;height:3px}.cross:after{width:3px;height:10px}
+
+/* ---------- Wizard ---------- */
+.wizard{background:var(--card);border-radius:22px;box-shadow:0 2px 4px rgba(15,42,29,.05),0 24px 60px rgba(15,42,29,.12);border:1px solid var(--line);overflow:hidden}
+.wz-head{padding:22px 24px 16px;border-bottom:1px solid var(--line)}
+.wz-head h3{font-size:20px;font-weight:800}
+.wz-head p{color:var(--muted);font-size:14px;margin-top:4px}
+.steps{display:flex;gap:6px;margin-top:16px}
+.steps .st{flex:1;display:grid;gap:6px;text-align:center;font-size:11.5px;font-weight:600;color:var(--soft)}
+.steps .bar{height:5px;border-radius:9px;background:var(--line)}
+.steps .st.done .bar,.steps .st.cur .bar{background:var(--blue)}
+.steps .st.cur{color:var(--navy)}
+.wz-body{padding:22px 24px}
+.wz-foot{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:16px 24px 22px;border-top:1px solid var(--line);background:var(--sky-2)}
+.wz-foot .hint{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.wz-foot .hint .ic{width:16px;height:16px;color:var(--green)}
+.pane{display:none}
+.pane.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pane.on{animation:none}html{scroll-behavior:auto}}
+.q{font-weight:700;font-size:16px;margin-bottom:12px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.svc{position:relative;border:1.5px solid var(--line);border-radius:14px;background:#fff;padding:14px 10px 12px;display:grid;justify-items:center;gap:8px;text-align:center;font-weight:700;font-size:13.5px;color:var(--navy);transition:border-color .15s,background .15s}
+.svc small{font-weight:500;color:var(--muted);font-size:11.5px;line-height:1.3}
+.svc .ic{width:30px;height:30px;color:var(--blue)}
+.svc:hover{border-color:#B9DEC8}
+.svc.on{border-color:var(--blue);background:var(--sky-2);box-shadow:0 0 0 3px rgba(31,157,87,.12)}
+.svc .tag{position:absolute;top:-9px;right:8px;background:var(--navy);color:#fff;font-size:10px;padding:2px 7px;border-radius:99px;letter-spacing:.04em}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fields .full{grid-column:1/-1}
+.fld{display:grid;gap:6px}
+.fld label,.lbl{font-size:13px;font-weight:700;color:var(--navy)}
+.fld label i{font-style:normal;color:var(--blue)}
+.inp{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;font-size:15px;transition:border-color .15s}
+.inp:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,157,87,.12)}
+.inp.err{border-color:#D93A3A;background:#FFF7F7}
+.errmsg{color:#C62828;font-size:12.5px;font-weight:600;display:none}
+.errmsg.on{display:block}
+textarea.inp{min-height:84px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip .ic{width:15px;height:15px}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{flex:1;border:0;background:#fff;padding:10px 6px;font-weight:600;font-size:13.5px;color:var(--muted);border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--sky);color:var(--blue-d)}
+.addr{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;background:var(--sky-2)}
+.addr + .addr{margin-top:12px}
+.addr h4{display:flex;gap:8px;align-items:center;font-size:15px}
+.addr h4 .dot{width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-size:12px;display:grid;place-items:center}
+.addr h4 .dot.b{background:var(--navy)}
+.drop{border:2px dashed #B9DEC8;border-radius:14px;background:var(--sky-2);padding:20px;display:grid;justify-items:center;gap:6px;text-align:center;color:var(--muted);font-size:13.5px;cursor:pointer}
+.drop strong{color:var(--blue);font-size:15px}
+.drop .ic{width:34px;height:34px;color:var(--blue)}
+.drop input{display:none}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.thumbs div{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--line);max-width:100%}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs button{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(15,42,29,.75);color:#fff;font-size:13px;line-height:1}
+.items{display:grid;gap:8px;margin-top:6px}
+.item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:8px 10px 8px 14px;background:#fff}
+.item span{flex:1;font-weight:600;font-size:14px}
+.stepper{display:flex;align-items:center;gap:4px}
+.stepper button{width:30px;height:30px;border-radius:8px;border:0;background:var(--sky);color:var(--blue);font-weight:800;font-size:17px}
+.stepper output{width:30px;text-align:center;font-weight:700}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted)}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:var(--blue);flex:none}
+.estimate{margin-top:18px;border-radius:14px;background:var(--navy);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:14px}
+.estimate .ic{width:34px;height:34px;padding:7px;background:rgba(255,255,255,.12);border-radius:10px}
+.estimate small{display:block;color:#C9C4B8;font-size:12px}
+.estimate strong{font-size:19px}
+.success{text-align:center;display:grid;gap:14px;justify-items:center;padding-block:10px}
+.success .big{width:64px;height:64px;border-radius:50%;background:var(--green-bg);color:var(--green);display:grid;place-items:center}
+.success .big .ic{width:34px;height:34px}
+.success h3{font-size:24px}
+.timeline{display:grid;gap:10px;text-align:left;width:100%;margin-top:6px}
+.timeline div{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.timeline b{display:block}
+.timeline span.n{width:24px;height:24px;flex:none;border-radius:50%;background:var(--sky);color:var(--blue);font-weight:800;font-size:12px;display:grid;place-items:center}
+.refno{font-family:ui-monospace,Menlo,monospace;background:var(--sky);color:var(--blue-d);padding:4px 10px;border-radius:8px;font-weight:700}
+
+/* ---------- Trust strip ---------- */
+.trust{background:#fff;border-block:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:26px}
+.trust div{display:flex;gap:12px;align-items:center}
+.trust .ic{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--sky);color:var(--blue)}
+.trust b{display:block;font-size:15px}
+.trust small{color:var(--muted);font-size:13px}
+
+/* ---------- How ---------- */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.how-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:12px;align-content:start}
+.how-card .num{font-weight:800;color:var(--blue);font-size:14px;letter-spacing:.1em}
+.how-card h3{font-size:21px}
+.how-card p{color:var(--muted)}
+.mini{margin-top:10px;border-radius:14px;background:var(--sky-2);border:1px solid var(--line);padding:14px;display:grid;gap:8px;font-size:13px}
+.mini .row{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-weight:600}
+.mini .row small{color:var(--muted);font-weight:500}
+.mini .ph2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini .ph2 figure{margin:0;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.mini .ph2 svg{display:block;width:100%;height:auto}
+.mini .ph2 figcaption{position:absolute;left:6px;bottom:6px;background:rgba(255,255,255,.94);border-radius:6px;padding:2px 7px;font-size:10.5px;font-weight:700;color:var(--ink)}
+.mini .ph{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mini .ph span{aspect-ratio:1;border-radius:8px;background:linear-gradient(135deg,#D7EDE0,#EEF7F1);display:grid;place-items:center;color:var(--soft);font-size:10px;font-weight:700}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:99px}
+.pill.green{background:var(--green-bg);color:var(--green)}
+.pill.blue{background:var(--sky);color:var(--blue-d)}
+.pill.orange{background:var(--orange-bg);color:var(--orange)}
+.pill.gray{background:#EEF1F6;color:var(--muted)}
+
+/* ---------- Services ---------- */
+.svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:start;transition:border-color .15s,box-shadow .15s}
+.svc-card:hover{border-color:#B9DEC8;box-shadow:var(--shadow)}
+.svc-card .ic{grid-row:span 3;width:48px;height:48px;padding:11px;border-radius:14px;background:var(--sky);color:var(--blue)}
+.svc-card h3{font-size:17px}
+.svc-card p{color:var(--muted);font-size:14px}
+.svc-card button{justify-self:start;margin-top:6px;border:0;background:none;color:var(--blue);font-weight:700;padding:0;display:inline-flex;gap:6px;align-items:center}
+.svc-card button .ic{grid-row:auto;width:16px;height:16px;padding:0;background:none}
+
+/* ---------- Compare showcase ---------- */
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.phone{width:min(340px,100%);margin-inline:auto;border-radius:44px;background:#0B0F1A;padding:12px;box-shadow:0 40px 80px rgba(15,42,29,.22)}
+.screen{border-radius:34px;background:#fff;overflow:hidden;padding:16px 14px 18px;display:grid;gap:10px}
+.screen .sb{display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:0 8px}
+.screen .notch{width:96px;height:24px;border-radius:14px;background:#0B0F1A;margin:-4px auto 4px}
+.route{display:flex;justify-content:space-between;align-items:center;padding:0 4px}
+.route b{font-size:17px}
+.offer{border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:8px}
+.offer.rec{border:2px solid var(--blue);position:relative}
+.offer.rec:after{content:"★ EMPFOHLEN";position:absolute;top:-10px;right:10px;background:var(--blue);color:#fff;font-size:9.5px;font-weight:800;padding:3px 8px;border-radius:6px;letter-spacing:.05em}
+.offer .top-row{display:flex;justify-content:space-between;gap:8px}
+.offer .firm{font-weight:800;font-size:14px}
+.offer .firm small{display:block;font-weight:600;color:var(--muted);font-size:11.5px}
+.offer .price{text-align:right;font-weight:800;font-size:16px}
+.offer .price small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+.offer .inc{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--muted)}
+.offer .inc span:before{content:"✓ ";color:var(--blue);font-weight:800}
+.offer .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.offer .acts button{border-radius:8px;padding:7px;font-size:12px;font-weight:700;border:1.5px solid #B9DEC8;background:#fff;color:var(--blue)}
+.offer .acts button.p{background:var(--blue);color:#fff;border-color:var(--blue)}
+.offer .acts button.done{background:var(--green);border-color:var(--green);color:#fff}
+.feat-list{display:grid;gap:18px;margin-top:26px}
+.feat-list div{display:flex;gap:14px}
+.feat-list .ic{width:44px;height:44px;padding:10px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--blue)}
+.feat-list b{display:block;font-size:16px}
+.feat-list p{color:var(--muted);font-size:14.5px}
+
+/* ---------- Benefits ---------- */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.benefits div{background:#fff;padding:28px;display:grid;gap:8px;align-content:start}
+.benefits .ic{width:30px;height:30px;color:var(--blue)}
+.benefits h3{font-size:18px}
+.benefits p{color:var(--muted);font-size:14.5px}
+
+/* ---------- Reviews ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:space-between}
+.review q{font-size:16px;font-weight:500;quotes:"«" "»"}
+.review .who{display:flex;gap:12px;align-items:center}
+.review .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.review .who small{display:block;color:var(--muted);font-size:13px}
+
+/* ---------- App band ---------- */
+.appband{background:var(--navy);color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.appband:before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(31,157,87,.55),rgba(31,157,87,0) 70%)}
+.appband h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.appband p{color:#C9C4B8;margin-top:12px;font-size:17px}
+.stores{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.store{display:flex;align-items:center;gap:10px;background:#fff;color:var(--navy);border-radius:12px;padding:10px 16px;border:0;font-weight:800;font-size:15px;text-align:left}
+.store small{display:block;font-size:10.5px;font-weight:600;color:var(--muted)}
+.store .ic{width:26px;height:26px}
+.app-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.app-stats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+.app-stats b{font-size:28px;display:block}
+.app-stats small{color:#C9C4B8}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:22px;color:var(--blue);line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding-bottom:18px;color:var(--muted)}
+
+/* ---------- CTA band / contact ---------- */
+.cta-band{background:linear-gradient(120deg,var(--blue) 0%,#0B46B8 100%);color:#fff;border-radius:28px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(26px,3vw,36px);font-weight:800}
+.cta-band p{color:#E8E4DA;margin-top:8px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.contact div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+.contact .ic{color:var(--blue);width:26px;height:26px}
+.contact b{display:block}
+.contact span{color:var(--muted);font-size:14px;user-select:all}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy);color:#C9C4B8;padding-block:56px 30px;margin-top:84px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff}
+footer .logo small{color:#9C978B}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+footer a,footer .lnk{color:#C9C4B8;display:block;font-size:14px;padding:3px 0;background:none;border:0;text-align:left}
+footer a:hover,footer .lnk:hover{color:#fff}
+footer .family{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+footer .family span{font-size:12px;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:3px 10px;font-weight:700}
+footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+/* ---------- Mobile sticky ---------- */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 24px rgba(15,42,29,.08)}
+.mbar .btn{width:100%}
+
+/* =================== PARTNER =================== */
+.p-hero{background:var(--navy);color:#fff;padding-block:64px 80px;position:relative;overflow:hidden}
+.p-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 90% 10%,rgba(31,157,87,.45),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(31,157,87,.2),transparent 70%)}
+.p-hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.p-hero .eyebrow{color:#1F9D57}
+.p-hero h1{font-size:clamp(38px,5vw,62px);font-weight:800;letter-spacing:-.035em;margin-top:14px}
+.p-hero h1 em{font-style:normal;color:#1F9D57}
+.p-hero .lead{color:#C9C4B8;font-size:18px;margin-top:18px;max-width:32em}
+.p-hero .ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.p-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.p-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;max-width:520px}
+.p-kpis div{border-left:2px solid rgba(110,160,255,.5);padding-left:14px}
+.p-kpis b{font-size:26px;display:block}
+.p-kpis small{color:#C9C4B8;font-size:13px}
+.p-card{background:#fff;color:var(--ink);border-radius:20px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.35);display:grid;gap:14px}
+.p-card .hd{display:flex;justify-content:space-between;align-items:center}
+.p-card .hd b{font-size:17px}
+.p-card .lead-row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.p-card .lead-row b{font-size:15px}
+.p-card .lead-row small{color:var(--muted);font-size:12.5px}
+.p-card .lead-row .pill{align-self:center;grid-row:span 2}
+.p-card .foot{display:flex;gap:10px;align-items:center;background:var(--sky-2);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--muted)}
+.p-card .foot .ic{color:var(--blue)}
+
+.branches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.branches span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:10px 16px;border-radius:99px;font-weight:700;font-size:14px}
+.branches .ic{width:18px;height:18px;color:var(--blue)}
+
+.p-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.p-step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px;align-content:start;position:relative}
+.p-step .n{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.p-step.hl .n{background:var(--blue)}
+.p-step h3{font-size:17px}
+.p-step p{color:var(--muted);font-size:14px}
+.p-note{margin-top:18px;background:var(--sky);border-radius:14px;padding:14px 18px;display:flex;gap:12px;align-items:center;color:var(--navy);font-weight:600}
+.p-note .ic{color:var(--blue)}
+
+/* Dashboard demo */
+.dash{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:220px 1fr;overflow:hidden;min-height:620px}
+.dash aside{border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:4px;background:#FBFCFE}
+.dash aside .logo{padding:4px 10px 18px}
+.dash aside .logo b{font-size:20px}
+.dnav{display:flex;align-items:center;gap:10px;border:0;background:none;padding:10px 12px;border-radius:10px;font-weight:600;color:var(--muted);font-size:14px;text-align:left}
+.dnav .ic{width:19px;height:19px}
+.dnav .ct{margin-left:auto;background:var(--blue);color:#fff;border-radius:99px;font-size:11px;padding:1px 8px;font-weight:700}
+.dnav.on{background:var(--navy);color:#fff}
+.dnav:hover:not(.on){background:var(--sky-2);color:var(--navy)}
+.dash aside .credit{margin-top:auto;background:var(--sky);border-radius:12px;padding:12px;font-size:12.5px;color:var(--navy)}
+.dash aside .credit b{font-size:20px;display:block}
+.dmain{padding:22px 24px;display:grid;gap:18px;align-content:start;min-width:0}
+.dmain .hi{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.dmain .hi h3{font-size:22px}
+.dmain .hi p{color:var(--muted);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:2px}
+.kpi small{color:var(--muted);font-size:12.5px;font-weight:600}
+.kpi b{font-size:26px}
+.kpi em{font-style:normal;color:var(--green);font-size:12px;font-weight:700}
+.tbl-wrap{border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;padding:11px 14px;background:#FBFCFE;border-bottom:1px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.new td{animation:flash 2.4s ease}
+@keyframes flash{0%,40%{background:#FFF7D6}100%{background:transparent}}
+.dpanel-title{display:flex;justify-content:space-between;align-items:center}
+.dpanel-title b{font-size:16px}
+.cols2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;align-content:start}
+.flow{display:grid;gap:12px}
+.flow div{display:flex;gap:12px}
+.flow .n{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--muted);flex:none}
+.flow .n.ok{background:var(--green);border-color:var(--green);color:#fff}
+.flow .n.cur{background:var(--blue);border-color:var(--blue);color:#fff}
+.flow b{display:block;font-size:14px}
+.flow small{color:var(--muted);font-size:12.5px}
+.calls div{display:flex;align-items:center;gap:10px;font-size:13.5px;padding:6px 0;border-bottom:1px solid var(--line)}
+.calls div:last-child{border-bottom:0}
+.calls time{font-weight:700;width:46px}
+.calls span{flex:1}
+
+/* Drawer */
+.drawer-bg{position:fixed;inset:0;background:rgba(15,42,29,.45);z-index:60;display:none}
+.drawer-bg.on{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#fff;z-index:61;transform:translateX(100%);transition:transform .28s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.drawer.on{transform:none}
+.drawer .dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.drawer .dh b{font-size:18px}
+.drawer .x{border:0;background:var(--bg);width:36px;height:36px;border-radius:10px;display:grid;place-items:center}
+.drawer .db{padding:20px 22px;overflow-y:auto;display:grid;gap:16px;align-content:start;flex:1}
+.drawer .df{padding:14px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;gap:10px}
+.drawer .df .btn{flex:1}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.facts div{background:var(--sky-2);border-radius:10px;padding:10px 12px;font-size:13px}
+.facts small{display:block;color:var(--muted);font-size:11.5px;font-weight:600}
+.facts b{font-size:14px}
+.phgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.phgrid span{aspect-ratio:1;border-radius:10px;background:linear-gradient(135deg,#D7EDE0,#EEF7F1);display:grid;place-items:center;font-size:11px;color:var(--soft);font-weight:700;max-width:100%;overflow:hidden}
+.phgrid img{width:100%;height:100%;object-fit:cover}
+.contactbox{border:1px dashed #B9DEC8;border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.contactbox .mask{font-family:ui-monospace,Menlo,monospace;font-weight:700}
+.oline{display:grid;grid-template-columns:1fr 110px 32px;gap:8px;align-items:center}
+.oline .inp{padding:9px 10px;font-size:14px}
+.oline button{border:0;background:var(--bg);border-radius:8px;height:36px;color:var(--muted)}
+.totals{display:grid;gap:4px;font-size:14px;background:var(--sky-2);border-radius:12px;padding:12px 14px}
+.totals div{display:flex;justify-content:space-between}
+.totals .t{font-size:18px;font-weight:800;border-top:1px solid var(--line);padding-top:6px;margin-top:4px}
+.addline{border:1.5px dashed #B9DEC8;background:#fff;border-radius:10px;padding:9px;color:var(--blue);font-weight:700;font-size:13.5px}
+
+/* Pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;position:relative}
+.price-card.hl{border:2px solid var(--blue);box-shadow:0 20px 50px rgba(31,157,87,.14)}
+.price-card .badge{position:absolute;top:-12px;left:28px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px;letter-spacing:.06em}
+.price-card h3{font-size:20px}
+.price-card .amt{font-size:38px;font-weight:800;letter-spacing:-.03em}
+.price-card .amt small{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:0}
+.price-card ul{display:grid;gap:8px;flex:1}
+.price-card li{display:flex;gap:8px;font-size:14.5px}
+.price-card li .ic{width:18px;height:18px;color:var(--green);margin-top:2px}
+.price-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
+
+/* Register */
+.reg{display:grid;grid-template-columns:1fr minmax(0,620px);gap:48px;align-items:start}
+.reg-side{display:grid;gap:18px;position:sticky;top:100px}
+.reg-side h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.reg-side p{color:var(--muted);font-size:17px}
+.quote{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:10px}
+.kanton{min-width:44px;justify-content:center;padding:7px 10px;font-size:12.5px}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row input{flex:1;accent-color:var(--blue)}
+.range-row output{font-weight:800;min-width:64px;text-align:right}
+.pk{display:grid;gap:8px}
+.pk label{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+.pk label:has(input:checked){border-color:var(--blue);background:var(--sky-2)}
+.pk input{accent-color:var(--blue);width:18px;height:18px}
+.pk span{flex:1;font-weight:700}
+.pk small{color:var(--muted);font-weight:600}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--navy);color:#fff;padding:13px 18px;border-radius:12px;font-weight:600;z-index:80;display:flex;gap:10px;align-items:center;transition:transform .3s ease;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0)}
+.toast .ic{color:#5FD69B}
+
+[hidden]{display:none!important}
+.view{display:none}
+.view.on{display:block}
+.demo-tag{justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--orange);background:var(--orange-bg);padding:4px 10px;border-radius:99px;text-transform:uppercase}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1180px){.nav{display:none}}
+@media (max-width:1060px){
+  .hero-grid,.showcase,.p-hero .wrap,.reg,.appband{grid-template-columns:1fr}
+  .reg-side{position:static}
+  .p-steps{grid-template-columns:1fr 1fr}
+  .dash{grid-template-columns:1fr}
+  .dash aside{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px}
+  .dash aside .logo,.dash aside .credit{display:none}
+  .dnav{white-space:nowrap}
+  .cols2{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .trust .wrap,.kpis{grid-template-columns:1fr 1fr}
+  .how,.svc-list,.benefits,.reviews,.prices,.contact{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .top .btn-top{display:none}
+  .mbar.show{display:block}
+  body.has-mbar{padding-bottom:76px}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:16px}
+  section.sec{padding-block:60px}
+  .top .wrap{gap:10px;height:64px}
+  .logo b{font-size:21px}
+  .logo small{display:none}
+  .switch button{padding:7px 10px;font-size:12px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .fields{grid-template-columns:1fr}
+  .wz-body,.wz-head{padding-inline:16px}
+  .wz-foot{padding-inline:16px;flex-wrap:wrap}
+  .wz-foot .hint{order:3;width:100%}
+  .steps .st span{display:none}
+  .p-steps,.p-kpis{grid-template-columns:1fr}
+  .appband,.cta-band{padding:28px}
+  .app-stats{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .oline{grid-template-columns:1fr 90px 32px}
+}
+/* ===== v2: logins, modebar, photos, apps, login modal ===== */
+.hero{background:#fff}
+.logins{display:flex;gap:8px}
+.login-btn{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-weight:700;font-size:13.5px;color:var(--navy);white-space:nowrap}
+.login-btn:hover{border-color:var(--blue);color:var(--blue)}
+.login-btn .ic{width:17px;height:17px}
+.login-btn.b2b{background:var(--navy);border-color:var(--navy);color:#fff}
+.login-btn.b2b:hover{background:var(--navy-2);color:#fff}
+.login-btn.in{border-color:var(--green);color:var(--green)}
+.modebar{background:var(--navy);color:#fff}
+.modebar .wrap{display:flex;align-items:center;justify-content:center;gap:14px;padding-block:9px;flex-wrap:wrap}
+.mb-lbl{font-size:13px;color:#B8C6E4;font-weight:600}
+.modebar .switch{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+.modebar .switch button{color:#C9D5EE;display:inline-flex;gap:7px;align-items:center}
+.modebar .switch button .ic{width:16px;height:16px}
+.modebar .switch button.on{background:#fff;color:var(--navy)}
+.polas{display:flex;gap:14px;margin-top:34px;align-items:flex-end;max-width:470px}
+.pola{margin:0;background:#fff;padding:8px 8px 4px;border-radius:5px;box-shadow:0 1px 2px rgba(10,27,63,.08),0 12px 26px rgba(10,27,63,.14);flex:1 1 0;max-width:146px;min-width:0}
+.pola img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px;max-width:100%}
+.pola figcaption{font-family:"Caveat","Segoe Script",cursive;font-size:19px;color:var(--navy);text-align:center;line-height:1.15;padding-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p1{transform:rotate(-3deg)}.p1 img{object-position:50% 88%}
+.p2{transform:rotate(2.5deg) translateY(-12px)}.p2 img{object-position:50% 85%}
+.p3{transform:rotate(-1.2deg)}
+@media (prefers-reduced-motion:reduce){.pola{transform:none}}
+.h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.muted-lg{color:var(--muted);font-size:17px;margin-top:12px;max-width:34em}
+.small{color:var(--muted);font-size:13px;margin-top:10px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-photos{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:14px;padding-bottom:30px}
+.ph{margin:0;border-radius:16px;overflow:hidden;background:var(--line);max-width:100%}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.ph.a{grid-row:span 2}
+.ph.b{aspect-ratio:1/1}
+.ph.c{aspect-ratio:1/1.1}
+.ph.c img{object-position:50% 70%}
+.note{position:absolute;left:10px;bottom:-4px;transform:rotate(-2deg);background:#FFF6C9;padding:4px 12px;border-radius:3px;box-shadow:0 4px 10px rgba(10,27,63,.12);font-size:22px}
+.checklist{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:14px}
+.cl-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cl-group{display:grid;gap:7px}
+.when{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.04em}
+.checklist label{display:flex;gap:10px;align-items:center;font-size:14.5px;cursor:pointer}
+.checklist input{width:18px;height:18px;accent-color:var(--green);flex:none}
+.checklist label:has(input:checked){color:var(--soft);text-decoration:line-through}
+.price-guide{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+table.pt{min-width:420px;background:#fff}
+.pt td,.pt th{padding:13px 16px}
+.pt th{font-size:12.5px}
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.app-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr auto;min-width:0}
+.app-card.dark{background:var(--navy);color:#fff;border-color:var(--navy);grid-template-columns:1fr}
+.app-txt{padding:28px;display:grid;gap:12px;align-content:start;min-width:0}
+.app-tag{display:inline-flex;gap:6px;align-items:center;font-size:12.5px;font-weight:700;color:var(--blue);justify-self:start}
+.app-tag .ic{width:16px;height:16px}
+.dark .app-tag{color:#7FAAFF}
+.app-txt h3{font-size:24px}
+.app-txt p{color:var(--muted)}
+.dark .app-txt p{color:#B8C6E4}
+.app-card .stores{margin-top:4px}
+.app-card:not(.dark) .store{background:var(--navy);color:#fff}
+.app-card:not(.dark) .store small{color:#B8C6E4}
+a.store{text-decoration:none}
+.qr-row{display:flex;gap:12px;align-items:center;margin-top:4px}
+.qr{width:84px;height:84px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px;display:block;flex:none}
+.qr svg{width:100%;height:100%;display:block}
+.qr-row small{color:var(--muted);font-size:13px;max-width:14em}
+.dark .qr-row small{color:#B8C6E4}
+.app-shot.k{width:210px;align-self:end;padding:24px 20px 0 0}
+.app-shot.k img{display:block;width:100%}
+.app-shot.b{padding:0 20px 20px}
+.app-shot.b img{border-radius:14px;display:block;width:100%}
+.cities{display:flex;flex-wrap:wrap;gap:8px}
+.cities a{background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-weight:600;color:var(--navy);font-size:14px}
+.cities a:hover{border-color:var(--blue);color:var(--blue)}
+.life{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:48px;align-items:center}
+.life-ph{margin:0;border-radius:20px;overflow:hidden;aspect-ratio:360/420;max-width:100%}
+.life-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.life-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.life-facts div{border-left:2px solid var(--blue);padding-left:12px}
+.life-facts b{font-size:24px;display:block}
+.life-facts small{color:var(--muted)}
+.modal-bg{position:fixed;inset:0;background:rgba(10,27,63,.5);z-index:70;display:none}
+.modal-bg.on{display:block}
+.modal{position:fixed;z-index:71;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100% - 32px));max-height:calc(100% - 32px);overflow-y:auto;background:#fff;border-radius:22px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.3);display:grid;gap:16px}
+.modal .x{position:absolute;top:16px;right:16px;border:0;background:var(--bg);width:34px;height:34px;border-radius:10px;display:grid;place-items:center}
+.modal .x .ic{width:18px;height:18px}
+.lg-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border-radius:12px;padding:4px;margin-right:44px}
+.lg-tabs button{border:0;background:none;padding:9px 6px;border-radius:9px;font-weight:700;font-size:13.5px;color:var(--muted);display:inline-flex;gap:6px;justify-content:center;align-items:center;white-space:nowrap}
+.lg-tabs button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(10,27,63,.12)}
+.lg-tabs .ic{width:16px;height:16px}
+#lgForm,#lg,#lgDone{display:grid;gap:14px}
+#lgTitle,#lgDone h3{font-size:22px}
+.lg-sub{color:var(--muted);font-size:14px;margin-top:-8px}
+.lg-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.linkbtn{border:0;background:none;color:var(--blue);font-weight:700;font-size:13.5px;padding:0}
+.lg-info{background:var(--green-bg);color:var(--green);border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:600}
+.lg-alt{font-size:13.5px;color:var(--muted);text-align:center;border-top:1px solid var(--line);padding-top:14px}
+.acc-req{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sky-2);border-radius:12px;padding:12px 14px}
+.acc-req small,.acc-off small{display:block;color:var(--muted);font-size:12.5px}
+.acc-off{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+@media (max-width:1060px){.story-grid,.price-guide,.life,.apps{grid-template-columns:1fr}.life-ph{max-width:380px}}
+@media (max-width:860px){.login-btn span{display:none}.login-btn{padding:8px 10px}}
+@media (max-width:560px){
+  .mb-lbl{display:none}
+  .modebar .switch button{padding:7px 10px;font-size:12px}
+  .app-card{grid-template-columns:1fr}
+  .app-shot.k{justify-self:center;padding:0 0 0;width:190px}
+  .app-txt{padding:22px}
+  .life-facts{grid-template-columns:1fr 1fr 1fr}
+  .life-facts b{font-size:19px}
+  .polas{gap:10px}
+  .pola figcaption{font-size:16px}
+}
+.price-guide>*,.story-grid>*,.life>*{min-width:0}
+.logo small{white-space:nowrap}
+@media (max-width:1360px){.nav a[href="#k-compare"],.nav a[href="#k-reviews"]{display:none}}
+
+.dmain>*{min-width:0}
+.src{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:#EEF1F6;color:#44506A;white-space:nowrap}
+.src.umzugdeal{background:#E3ECFF;color:#1446B8}
+.src.malerdeal{background:#FFF1BF;color:#7A5600}
+.src.reinigungdeal{background:#DDF3E6;color:#136B3E}
+.src.entsorgungdeal{background:#F7E1E3;color:#8E2F37}
+.dash aside .logo small{display:block;font-size:8.5px;letter-spacing:.28em;color:var(--muted);margin-top:4px}
+footer .family .fam-main{border-color:rgba(255,255,255,.5);color:#fff}
+.lg-hub{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);background:var(--sky-2);border-radius:10px;padding:8px 12px}
+
+/* ===== brand: reinigungdeal.ch ===== */
+:root{--y:#1F9D57;--y-d:#17824A;--on:#fff;--on-m:rgba(255,255,255,.8);--mark:#BDE7CD;--hl:rgba(255,255,255,.22)}
+.logo b span{color:var(--y);background:none;padding:0}
+footer .logo b span{color:#fff;background:none;color:var(--y)}
+.hero h1 em{color:var(--ink);background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.btn-primary{background:var(--y);color:var(--on);box-shadow:0 6px 16px rgba(31,157,87,.3)}
+.btn-primary:hover{background:var(--y-d)}
+.btn-ghost{color:var(--ink)}
+.switch button.on{background:var(--y);color:var(--on)}
+.modebar{background:var(--y);color:var(--on)}
+.mb-lbl{color:var(--on-m)}
+.modebar .switch{background:rgba(255,255,255,.25);border-color:rgba(0,0,0,.12)}
+.modebar .switch button{color:var(--on-m)}
+.modebar .switch button.on{background:var(--on);color:#17824A}
+.chip.on{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.estimate{background:var(--y);color:var(--on)}
+.estimate small{color:var(--on-m)}
+.estimate .ic{background:rgba(255,255,255,.3)}
+.steps .st.done .bar,.steps .st.cur .bar{background:var(--y-d)}
+.svc.on{border-color:var(--y-d);background:var(--sky-2)}
+.addr h4 .dot{background:var(--y);color:var(--on)}
+.offer.rec{border-color:var(--y-d)}
+.offer.rec:after{background:var(--y);color:var(--on)}
+.offer .acts button.p{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.p-hero{background:var(--y);color:var(--on)}
+.p-hero:before{background:radial-gradient(700px 400px at 90% 10%,rgba(255,255,255,.35),transparent 70%)}
+.p-hero .eyebrow{color:var(--on-m)}
+.p-hero h1 em{color:var(--on);background:linear-gradient(transparent 62%,var(--hl) 62%,var(--hl) 94%,transparent 94%)}
+.p-hero .lead,.p-kpis small{color:var(--on-m)}
+.p-hero .btn-primary{background:var(--on);color:#17824A;box-shadow:none}
+.p-hero .btn-ghost{color:var(--on);border-color:var(--on-m);background:transparent}
+.p-kpis div{border-left-color:var(--on-m)}
+.dnav.on{background:var(--y);color:var(--on)}
+.dnav .ct{background:var(--ink);color:#fff}
+.p-step.hl .n{background:var(--y);color:var(--on)}
+.flow .n.cur{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.price-card.hl{border-color:var(--y-d);box-shadow:0 20px 50px rgba(31,157,87,.18)}
+.price-card .badge{background:var(--y);color:var(--on)}
+.app-card.dark{background:var(--y);color:var(--on);border-color:var(--y-d)}
+.dark .app-tag{color:var(--on)}
+.dark .app-txt p,.dark .qr-row small{color:var(--on-m)}
+.cta-band{background:var(--y);color:var(--on)}
+.cta-band p{color:var(--on-m)}
+.cta-band .btn-white,.cta-band .btn-primary{background:var(--on);color:#17824A;box-shadow:none}
+.pill.blue{background:var(--sky);color:var(--blue-d)}
+.stepper button{color:var(--ink)}
+.eyebrow{color:var(--blue)}
+/* painted cards instead of photos */
+.pola .swc{aspect-ratio:3/4;border-radius:2px;display:grid;place-items:center;position:relative;overflow:hidden}
+.pola .swc:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.28),rgba(255,255,255,0) 40%,rgba(0,0,0,.05))}
+.pola .swc svg{display:block;width:100%;height:100%}
+.pola .swc .ic{width:46%;height:46%;color:var(--blue)}
+.pola .swc .ic svg{stroke-width:1.4}
+.pola .code{display:block;text-align:center;font:600 10.5px/1.2 ui-monospace,Menlo,monospace;color:var(--muted);padding-bottom:3px;letter-spacing:.02em}
+.fan{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;gap:14px;position:relative}
+.fan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fan-grid div{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.fan-grid span{display:block;aspect-ratio:4/3}
+.fan-grid b{display:block;font-size:13px;padding:7px 9px 0}
+.fan-grid small{display:block;font:600 10.5px ui-monospace,Menlo,monospace;color:var(--muted);padding:0 9px 8px}
+.plan-row{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.plan-row:last-child{border-bottom:0}
+.plan-row .dot{width:12px;height:12px;border-radius:50%;flex:none}
+.plan-row b{min-width:110px}
+.plan-row span{color:var(--muted)}
+.fan .note{position:static;justify-self:start;margin-top:4px}
+.mockphone{width:210px;border-radius:32px;background:#16140F;padding:9px;align-self:end;margin:24px 20px 0 0;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0}
+.mockphone .scr{background:#fff;border-radius:24px 24px 0 0;padding:16px 12px 18px;display:grid;gap:8px}
+.mockphone .scr .logo b{font-size:15px}
+.mockphone .scr p{font-weight:800;font-size:14px;line-height:1.2}
+.mockphone .tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mockphone .tiles span{border:1px solid var(--line);border-radius:10px;padding:8px 6px;display:grid;gap:4px;font-size:10.5px;font-weight:700;justify-items:start}
+.mockphone .tiles .ic{width:18px;height:18px;color:var(--blue)}
+.mockphone .mbtn{background:var(--y);color:var(--on);border-radius:9px;text-align:center;font-size:11px;font-weight:800;padding:8px}
+.app-shot.b .p-card{box-shadow:0 14px 34px rgba(0,0,0,.15);gap:10px;padding:16px}
+.paper{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 20px 40px rgba(0,0,0,.1);padding:24px;display:grid;gap:10px;transform:rotate(-1.2deg);max-width:420px;font-size:13.5px}
+.paper-h{display:flex;justify-content:space-between;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:10px;flex-wrap:wrap}
+.paper-h small{color:var(--muted)}
+.paper-r{display:grid;grid-template-columns:1fr auto;gap:2px 10px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.paper-r small{color:var(--muted);grid-column:1}
+.paper-r b{grid-row:1/span 2;grid-column:2;align-self:center;font-variant-numeric:tabular-nums}
+.paper-t{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.paper-t.big{font-weight:800;font-size:16px;border-top:2px solid var(--ink);padding-top:8px}
+.paper .hand{font-size:22px;color:var(--blue);transform:rotate(-3deg);justify-self:end}
+.fam-note{display:flex;gap:12px;align-items:center;margin-top:30px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.fam-note b{color:var(--ink)}
+.examples{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.example{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:12px;align-content:space-between}
+.example .ic{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--sky);color:var(--blue)}
+.example p{font-size:16px;font-weight:600}
+.example .pr{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted)}
+.example .pr b{color:var(--ink);font-size:17px}
+@media (max-width:860px){.examples{grid-template-columns:1fr}}
+@media (max-width:560px){.mockphone{justify-self:center;margin:0}.fan-grid{grid-template-columns:repeat(2,1fr)}}
+
+.lnk-imp{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.lnk-imp:hover{color:#fff}
+.modal.imp{width:min(640px,calc(100% - 32px));gap:10px;padding:28px}
+.modal.imp h3{font-size:22px;margin-right:44px}
+.modal.imp h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 2px}
+.modal.imp p{font-size:14.5px;line-height:1.55;color:var(--navy)}
+.modal.imp a{color:var(--blue);text-decoration:underline}
+.modal[hidden]{display:none}
+.cookie{position:fixed;left:16px;bottom:16px;z-index:80;width:min(400px,calc(100% - 32px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(10,27,63,.22);padding:18px 18px 16px;display:grid;gap:10px}
+.cookie[hidden]{display:none}
+.cookie b{font-size:15px;color:var(--ink)}
+.cookie p{font-size:13px;line-height:1.5;color:var(--muted)}
+.cookie .btn{justify-self:start;padding:9px 16px;font-size:14px}
+@media (max-width:560px){.cookie{bottom:78px}}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#kunden" data-go="kunden" aria-label="reinigungdeal.ch Startseite"><b>reinigung<span>deal</span>.ch</b><small>REINIGUNG. SCHWEIZWEIT.</small></a>
+    <nav class="nav" id="navK">
+      <a href="#k-how">So funktioniert's</a><a href="#k-services">Leistungen</a><a href="#k-compare">Angebote</a><a href="#k-reviews">Beispiele</a><a href="#k-faq">FAQ</a>
+    </nav>
+    <div class="spacer"></div>
+    <a class="btn btn-primary btn-sm btn-top" id="topCta" href="#anfrage">Offerten anfordern</a>
+  </div>
+</header>
+
+<!-- ================================================================ -->
+<!-- ========================= KUNDEN VIEW ========================== -->
+<!-- ================================================================ -->
+<main id="view-kunden" class="view on">
+
+<section class="hero" id="anfrage">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Reinigung für Büro und Zuhause</span>
+      <h1 style="margin-top:14px">Blitzsauber.<br><em>Ohne Suchaufwand.</em></h1>
+      <p class="lead">Ob Kanzlei in Zug, Arztpraxis in Bern oder Endreinigung Ihrer Wohnung in Zürich: Beschreiben Sie Ihren Reinigungsbedarf einmal und erhalten Sie bis zu 5 Offerten von geprüften Schweizer Reinigungsfirmen. Kostenlos und unverbindlich.</p>
+      <ul class="clean hero-points"><li><i class="ic" data-i="check"></i>100 % kostenlos und unverbindlich</li><li><i class="ic" data-i="house"></i>Für Zuhause, Wohnung und Gewerbe</li><li><i class="ic" data-i="calendar"></i>Einmalig oder im Abo, auch abends und am Wochenende</li></ul>
+      <div class="polas" aria-hidden="true"><figure class="pola p1"><div class="swc" style="background:#E1F4E8"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Kanzlei am Abend"><rect width="120" height="160" fill="#E1F4E8"/>
+<rect x="14" y="12" width="92" height="62" rx="3" fill="#BFD9E8" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="88" cy="30" r="8" fill="#fff"/><path d="M14 74V56h12v-8h10v8h8V44h12v12h10v-6h12v24z" fill="#8FB7CD" opacity=".85"/><path d="M60 12v62" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect y="128" width="120" height="32" fill="#CFE9D9"/>
+<rect x="10" y="102" width="100" height="7" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 109v19M102 109v19" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="28" y="76" width="36" height="24" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 100v2M38 102h16" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 83h14M33 90h22" fill="none" stroke="#1F9D57" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M88 102V86l10-8" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 76h14l-3 8H95z" fill="#F6D86B" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 128l3-18h14l3 18z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 110V84" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 84h10l2 6h-14z" fill="#7CC49A" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path transform="translate(104 100) scale(0.7)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/></svg></div><figcaption>Kanzlei, 18:30</figcaption><span class="code">2× pro Woche</span></figure><figure class="pola p2"><div class="swc" style="background:#F2FAF5"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wohnung abgenommen"><rect width="120" height="160" fill="#F2FAF5"/>
+<rect y="124" width="120" height="36" fill="#DCEFE3"/><path d="M0 124h120" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="12" y="34" width="38" height="90" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="42" width="26" height="34" rx="1" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="84" width="26" height="32" rx="1" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="80" r="2.2" fill="#0F2A1D"/>
+<path d="M78 24h26v10H78z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="84" cy="44" r="2" fill="#0F2A1D"/><path d="M84 44v10l-5 3 3 8" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 56h8v10h-8z" fill="#F6D86B" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="84" cy="104" r="17" fill="#1F9D57" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M75 104l6 7 11-14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path transform="translate(62 60) scale(1.1)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/><path transform="translate(106 78) scale(0.8)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/><path transform="translate(66 140) scale(0.9)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#7CC49A"/><path transform="translate(30 148) scale(0.7)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/></svg></div><figcaption>Abnahme bestanden</figcaption><span class="code">Endreinigung</span></figure><figure class="pola p3"><div class="swc" style="background:#E6F0F4"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Glänzende Fenster"><rect width="120" height="160" fill="#E6F0F4"/>
+<rect x="16" y="16" width="88" height="106" rx="3" fill="#CFE6F0" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 16v106M16 69h88" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 56L48 24M30 112L56 76M68 54L94 22M72 108L96 78" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+<rect x="8" y="122" width="104" height="9" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92 122v-6h12v6" fill="#7CC49A" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M98 116c-6-2-8-10-4-15 5 2 7 8 4 15zM98 116c5-2 8-7 7-12-5 1-8 6-7 12z" fill="#1F9D57" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="rotate(-28 62 78)"><rect x="40" y="74" width="44" height="7" rx="2" fill="#1F9D57" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 81v14" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="49" y="95" width="6" height="22" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path transform="translate(34 38) scale(1)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/><path transform="translate(86 60) scale(0.9)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/><path transform="translate(76 96) scale(0.7)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2z" fill="#1F9D57"/></svg></div><figcaption>Fenster glänzen</figcaption><span class="code">innen + aussen</span></figure></div>
+      <div class="fam-note"><span class="cross"></span><span>Ein Portal der Deal-Familie von <b>umzugdeal.ch</b>. Ihre Anfrage geht zuerst direkt an unser Team.</span></div>
+    </div>
+
+    <!-- ===== Wizard ===== -->
+    <form class="wizard" id="wz" novalidate>
+      <div class="wz-head">
+        <h3 id="wzTitle">Was dürfen wir für Sie reinigen?</h3>
+        <p id="wzSub">Kostenlos Offerten erhalten, Schritt 1 von 5</p>
+        <div class="steps" id="wzSteps">
+          <div class="st cur"><div class="bar"></div><span>Service</span></div>
+          <div class="st"><div class="bar"></div><span>Details</span></div>
+          <div class="st"><div class="bar"></div><span>Adresse</span></div>
+          <div class="st"><div class="bar"></div><span>Fotos</span></div>
+          <div class="st"><div class="bar"></div><span>Kontakt</span></div>
+        </div>
+      </div>
+
+      <div class="wz-body">
+        <!-- Step 1 -->
+        <div class="pane on" data-step="1">
+          <div class="svc-grid" id="svcGrid"></div>
+          <p class="errmsg" id="err-svc" style="margin-top:10px">Bitte wählen Sie einen Service aus.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="pane" data-step="2">
+          <div class="fields">
+            <div class="fld">
+              <label for="f-date">Wunschtermin <i>*</i></label>
+              <input class="inp" type="date" id="f-date">
+              <span class="errmsg" id="err-date">Bitte Datum wählen.</span>
+            </div>
+            <div class="fld">
+              <span class="lbl">Flexibilität</span>
+              <div class="seg" id="f-flex"><button type="button" class="on" data-v="fix">Fix</button><button type="button" data-v="±3">± 3 Tage</button><button type="button" data-v="±7">± 1 Woche</button></div>
+            </div>
+            <div class="fld full" id="g-size">
+              <span class="lbl" id="sizeLbl">Wohnungsgrösse <i style="font-style:normal;color:var(--blue)">*</i></span>
+              <div class="chips" id="f-size"></div>
+              <span class="errmsg" id="err-size">Bitte Grösse wählen.</span>
+            </div>
+            <div class="fld full" id="g-clean">
+              <span class="lbl" id="umfLbl">Häufigkeit und Art</span>
+              <div class="chips" id="f-clean"></div>
+            </div>
+            <div class="fld full">
+              <span class="lbl">Zusatzleistungen</span>
+              <div class="chips" id="f-extra"></div>
+            </div>
+          </div>
+          <div class="estimate" id="est">
+            <i class="ic" data-i="bolt"></i>
+            <div><small>Unverbindliche Preisschätzung</small><strong class="tnum" id="estVal">–</strong></div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="pane" data-step="3">
+          <div class="addr">
+            <h4><span class="dot">A</span><span id="addrALbl">Auszugsadresse</span></h4>
+            <div class="fields">
+              <div class="fld full"><label for="a-str">Strasse und Nr.</label><input class="inp" id="a-str" placeholder="Bahnhofstrasse 12" autocomplete="street-address"></div>
+              <div class="fld"><label for="a-plz">PLZ und Ort <i>*</i></label><input class="inp" id="a-plz" placeholder="8001 Zürich"><span class="errmsg" id="err-a">Bitte PLZ und Ort angeben.</span></div>
+              <div class="fld"><label for="a-fl">Etage</label><select class="inp" id="a-fl"><option>Erdgeschoss</option><option>1. Stock</option><option selected>2. Stock</option><option>3. Stock</option><option>4. Stock</option><option>5+ Stock</option></select></div>
+              <div class="fld full"><span class="lbl">Lift vorhanden?</span><div class="seg" id="a-lift"><button type="button" data-v="ja">Ja</button><button type="button" class="on" data-v="nein">Nein</button></div></div>
+            </div>
+          </div>
+          <div class="addr" id="addrB">
+            <h4><span class="dot b">B</span>Einzugsadresse</h4>
+            <div class="fields">
+              <div class="fld full"><label for="b-str">Strasse und Nr.</label><input class="inp" id="b-str" placeholder="Steinenvorstadt 5"></div>
+              <div class="fld"><label for="b-plz">PLZ und Ort <i>*</i></label><input class="inp" id="b-plz" placeholder="4051 Basel"><span class="errmsg" id="err-b">Bitte PLZ und Ort angeben.</span></div>
+              <div class="fld"><label for="b-fl">Etage</label><select class="inp" id="b-fl"><option>Erdgeschoss</option><option selected>1. Stock</option><option>2. Stock</option><option>3. Stock</option><option>4. Stock</option><option>5+ Stock</option></select></div>
+              <div class="fld full"><span class="lbl">Lift vorhanden?</span><div class="seg" id="b-lift"><button type="button" class="on" data-v="ja">Ja</button><button type="button" data-v="nein">Nein</button></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="pane" data-step="4">
+          <p class="q" style="margin-bottom:4px">Fotos der Räume</p>
+          <p style="color:var(--muted);font-size:13.5px;margin-bottom:12px">Mit Fotos von Böden, Sanitär und Fenstern schätzen Firmen den Aufwand genauer ein.</p>
+          <label class="drop" for="f-photos">
+            <i class="ic" data-i="camera"></i>
+            <strong>Fotos hinzufügen</strong>
+            JPG, PNG, HEIC · max. 6 Fotos · Räume, Böden, Sanitär, Fenster
+            <input type="file" id="f-photos" accept="image/*" multiple>
+          </label>
+          <div class="thumbs" id="thumbs"></div>
+          <p class="q" style="margin:20px 0 6px">Räume und Details</p>
+          <div class="items" id="items"></div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="pane" data-step="5">
+          <div class="fields">
+            <div class="fld full"><span class="lbl">Anrede</span><div class="seg" id="c-sal"><button type="button" class="on" data-v="Herr">Herr</button><button type="button" data-v="Frau">Frau</button><button type="button" data-v="Divers">Divers</button></div></div>
+            <div class="fld"><label for="c-fn">Vorname <i>*</i></label><input class="inp" id="c-fn" autocomplete="given-name"><span class="errmsg" id="err-fn">Bitte Vorname angeben.</span></div>
+            <div class="fld"><label for="c-ln">Nachname <i>*</i></label><input class="inp" id="c-ln" autocomplete="family-name"><span class="errmsg" id="err-ln">Bitte Nachname angeben.</span></div>
+            <div class="fld"><label for="c-em">E-Mail <i>*</i></label><input class="inp" id="c-em" type="email" autocomplete="email" placeholder="name@beispiel.ch"><span class="errmsg" id="err-em">Bitte gültige E-Mail angeben.</span></div>
+            <div class="fld"><label for="c-ph">Telefon <i>*</i></label><input class="inp" id="c-ph" type="tel" autocomplete="tel" placeholder="+41 79 123 45 67"><span class="errmsg" id="err-ph">Bitte Telefonnummer angeben.</span></div>
+            <div class="fld full"><span class="lbl">Bevorzugter Kontakt</span><div class="seg" id="c-way"><button type="button" data-v="E-Mail">E-Mail</button><button type="button" data-v="Telefon">Telefon</button><button type="button" class="on" data-v="Beides">Beides</button></div></div>
+            <div class="fld full"><label for="c-note">Hinweise für die Firmen (optional)</label><textarea class="inp" id="c-note" placeholder="z. B. Reinigung nur nach 18 Uhr, Schlüssel beim Empfang, Wohnungsabgabe am 30.11. um 10 Uhr"></textarea></div>
+            <input type="text" id="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <span class="errmsg full" id="err-send"></span>
+            <label class="check full"><input type="checkbox" id="c-ok"> Ich akzeptiere die AGB und die Datenschutzerklärung. Meine Anfrage geht per E-Mail an das Team von reinigungdeal.ch und wird zur Vermittlung an passende Reinigungsfirmen verwendet.</label>
+            <span class="errmsg full" id="err-ok">Bitte AGB und Datenschutz bestätigen.</span>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="pane" data-step="6">
+          <div class="success">
+            <div class="big"><i class="ic" data-i="check"></i></div>
+            <h3>Danke, <span id="okName">Ihre Anfrage</span> ist eingegangen!</h3>
+            <p style="color:var(--muted)">Anfragenummer <span class="refno" id="okRef">US-0000</span>. Eine Bestätigung ist unterwegs an <b id="okMail"></b>.</p>
+            <div class="timeline">
+              <div><span class="n">1</span><p><b>Jetzt</b>Ihre Anfrage ist bei uns eingegangen. Unser Team prüft sie und meldet sich bei Ihnen.</p></div>
+              <div><span class="n">2</span><p><b>Innert 24 Stunden</b>Sie erhalten passende Offerten von Reinigungsfirmen in Ihrer Region per E-Mail.</p></div>
+              <div><span class="n">3</span><p><b>Sie entscheiden</b>Offerten vergleichen, Fragen stellen und das beste Angebot annehmen.</p></div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+              <button type="button" class="btn btn-ghost" id="wzReset">Neue Anfrage</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wz-foot" id="wzFoot">
+        <button type="button" class="btn btn-ghost" id="wzBack" hidden>Zurück</button>
+        <span class="hint"><i class="ic" data-i="shield"></i>SSL-verschlüsselt · Ihre Anfrage geht direkt an unser Team</span>
+        <button type="button" class="btn btn-primary" id="wzNext">Weiter <i class="ic" data-i="arrow"></i></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap"><div><i class="ic" data-i="check"></i><p><b>Kostenlos</b><small>Für Sie ohne Gebühren</small></p></div><div><i class="ic" data-i="shield"></i><p><b>Geprüfte Firmen</b><small>Versicherung und Referenzen</small></p></div><div><i class="ic" data-i="building"></i><p><b>Privat und Gewerbe</b><small>Kanzlei, Praxis, Zuhause</small></p></div><div><i class="ic" data-i="clock"></i><p><b>Antwort in 24 h</b><small>Meist schon am selben Tag</small></p></div></div>
+</div>
+
+<section class="sec" id="k-how">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">So funktioniert's</span><h2>In drei Schritten zur passenden Reinigungsfirma</h2><p>Sie beschreiben Ihren Bedarf einmal, ob einmalig oder im Abo. Wir finden die passenden Firmen.</p></div>
+    <div class="how"><div class="how-card"><span class="num">SCHRITT 1</span><h3>Bedarf beschreiben</h3><p>Objekt, Fläche und Häufigkeit angeben. Sie sehen sofort eine Preisschätzung.</p><div class="mini"><div class="row"><span>Büroreinigung</span><span class="pill blue">Gewählt</span></div><div class="row"><span>180 m² · 2× pro Woche</span><small>Zug</small></div></div></div><div class="how-card"><span class="num">SCHRITT 2</span><h3>Fotos hochladen</h3><p>Fotos von Räumen, Böden und Fenstern helfen den Firmen, genau zu offerieren.</p><div class="mini"><div class="ph2"><figure><svg viewBox="0 0 160 120" role="img" aria-label="Skizze Empfang"><rect width="160" height="120" fill="#E1F4E8"/><rect y="88" width="160" height="32" fill="#CFE9D9"/>
+<circle cx="40" cy="30" r="13" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 30V22M40 30l6 4" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="62" y="22" width="52" height="8" rx="2" fill="#1F9D57" opacity=".85"/>
+<path d="M54 88V62h78v26z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M54 62h78" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 70h16M70 78h30" fill="none" stroke="#7CC49A" stroke-width="3" stroke-linecap="round"/>
+<path d="M104 62v-9h14v9" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M142 88v-12" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M136 76h12l-2 12h-8z" fill="#7CC49A" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M142 76c-7-3-9-11-5-17 5 2 8 8 5 17zM142 76c6-2 9-8 8-14-5 1-9 7-8 14z" fill="#1F9D57" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 88v-18h22v18" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 70c0-8 14-8 14 0" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption>Empfang</figcaption></figure><figure><svg viewBox="0 0 160 120" role="img" aria-label="Skizze Büro"><rect width="160" height="120" fill="#EAF3F7"/><rect y="90" width="160" height="30" fill="#D5E6EE"/>
+<rect x="100" y="14" width="46" height="46" rx="3" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M123 14v46M100 37h46" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M104 18l10 0-10 14zM127 18l10 0-10 14z" fill="#BDE7CD" opacity=".8"/>
+<rect x="14" y="62" width="82" height="7" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 69v21M88 69v21" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="24" y="36" width="30" height="21" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M39 57v5M31 62h16" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 42h12M29 48h18" fill="none" stroke="#1F9D57" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="60" y="40" width="24" height="17" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M72 57v5M66 62h12" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M118 90v-20c0-6 14-6 14 0v20" fill="#7CC49A" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 90h28M125 90v8M115 98h20" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption>Büro</figcaption></figure><figure><svg viewBox="0 0 160 120" role="img" aria-label="Skizze Küche"><rect width="160" height="120" fill="#F4F1E4"/><rect y="94" width="160" height="26" fill="#E6E0C8"/>
+<rect x="10" y="14" width="64" height="28" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 14v28" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="84" y="14" width="66" height="28" rx="2" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M117 14v28" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="38" cy="28" r="1.5" fill="#0F2A1D"/><circle cx="46" cy="28" r="1.5" fill="#0F2A1D"/><circle cx="113" cy="28" r="1.5" fill="#0F2A1D"/><circle cx="121" cy="28" r="1.5" fill="#0F2A1D"/>
+<rect x="10" y="62" width="140" height="8" fill="#BDE7CD" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="70" width="140" height="24" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 70v24M104 70v24" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 62v-8h22v8" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M39 54v-5h8" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="112" y="48" width="26" height="14" rx="2" fill="#1F9D57" opacity=".85" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="120" cy="55" r="3" fill="#fff"/><circle cx="130" cy="55" r="3" fill="#fff"/>
+<path d="M90 56a6 6 0 1 1 12 0" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption>Küche</figcaption></figure><figure><svg viewBox="0 0 160 120" role="img" aria-label="Skizze WC"><rect width="160" height="120" fill="#E4F2F0"/><rect y="92" width="160" height="28" fill="#CFE5E2"/>
+<path d="M0 30h160M0 60h160M32 0v92M64 0v92M96 0v92M128 0v92" fill="none" stroke="#BFDCD8" stroke-width="1.5"/>
+<rect x="86" y="18" width="40" height="34" rx="3" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 26l10 14M104 22l14 20" fill="none" stroke="#7CC49A" stroke-width="2" stroke-linecap="round"/>
+<path d="M82 66h50l-6 14c-1 3-4 4-6 4h-26c-2 0-5-1-6-4z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 66v-6M99 60h16" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 84v10M122 84v10" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="24" y="30" width="26" height="22" rx="3" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 52h22l-2 14H28z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 66h26v26H24z" fill="#fff" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 70h14" fill="none" stroke="#0F2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 40l5-3 5 3-3 6z" fill="#BDE7CD" opacity=".8"/></svg><figcaption>WC</figcaption></figure></div><div class="row"><span>8 Arbeitsplätze · 12 Fenster</span><small>Details</small></div></div></div><div class="how-card"><span class="num">SCHRITT 3</span><h3>Offerten vergleichen</h3><p>Bis zu 5 Offerten mit Leistungsverzeichnis und Fixpreis pro Einsatz oder Monat.</p><div class="mini"><div class="row"><span>Offerte A · ★ 4.8</span><b class="tnum">CHF 1'290 / Mt.</b></div><div class="row"><span>Offerte B · ★ 4.6</span><b class="tnum">CHF 1'420 / Mt.</b></div></div></div></div>
+  </div>
+</section>
+
+<section class="sec" id="k-services" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Leistungen</span><h2>Reinigung für Büro, Praxis und Zuhause</h2><p>Wählen Sie einen Service und starten Sie direkt Ihre Anfrage.</p></div>
+    <div class="svc-list" id="svcList"></div>
+  </div>
+</section>
+
+<section class="sec" id="k-compare">
+  <div class="wrap showcase">
+    <div>
+      <span class="eyebrow">Offerten vergleichen</span>
+      <h2 style="font-size:clamp(28px,3.4vw,40px);font-weight:800;margin-top:12px">Offerten vergleichen. Den richtigen Partner finden.</h2>
+      <p style="color:var(--muted);font-size:17px;margin-top:12px">Alle Offerten erscheinen übersichtlich in Ihrem Konto: was gereinigt wird, wie oft, zu welchen Zeiten und zu welchem Preis.</p>
+      <div class="feat-list"><div><i class="ic" data-i="shield"></i><p><b>Geprüfte Reinigungsfirmen</b>Mit Versicherung, Referenzen und festen Teams.</p></div><div><i class="ic" data-i="file"></i><p><b>Klare Leistungsverzeichnisse</b>Was, wie oft und wann: alles schriftlich in der Offerte.</p></div><div><i class="ic" data-i="key"></i><p><b>Diskret und zuverlässig</b>Schlüsselprotokoll und Vertraulichkeit für Kanzleien und Praxen.</p></div></div>
+      <a class="btn btn-primary btn-lg" href="#anfrage" style="margin-top:28px">Jetzt Offerten anfordern <i class="ic" data-i="arrow"></i></a>
+    </div>
+    <div>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span>●●● ▮</span></div><div class="notch"></div>
+        <div class="route"><b>Kanzlei Zug</b><span class="pill green">3 Angebote</span></div>
+        <div style="display:flex;gap:10px;font-size:12px;color:var(--muted);padding:0 4px">180 m² · 2× pro Woche · 6 Fotos</div>
+        <div class="offer rec"><div class="top-row"><div class="firm">Glanzwerk Reinigung AG<small>★ 4.8 (93) · Antwort in 2 Std.</small></div><div class="price tnum">CHF 1'290<small>pro Monat</small></div></div><div class="inc"><span>Büros & Böden</span><span>Sanitär</span><span>Kaffeeküche</span><span>Material inkl.</span></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div><div class="offer"><div class="top-row"><div class="firm">Sauberteam GmbH<small>★ 4.6 (61) · Antwort in 4 Std.</small></div><div class="price tnum">CHF 1'420<small>pro Monat</small></div></div><div class="inc"><span>Büros & Böden</span><span>Sanitär</span><span>Material inkl.</span></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div><div class="offer"><div class="top-row"><div class="firm">Blitzblank Services<small>★ 4.5 (38) · Antwort in 6 Std.</small></div><div class="price tnum">CHF 1'560<small>pro Monat</small></div></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div>
+        <p style="text-align:center;font-size:11px;color:var(--soft)">Beispielansicht mit Musterfirmen</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="k-story" style="padding-top:0">
+  <div class="wrap story-grid">
+    <div><div class="fan"><b>Reinigungsplan Kanzlei (Beispiel)</b><div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Montag</b><span>Büros, Böden, Papierkörbe</span></div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Mittwoch</b><span>Sanitär und Kaffeeküche</span></div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Freitag</b><span>Empfang, Sitzungszimmer, Glas</span></div><div class="plan-row"><span class="dot" style="background:#7CC49A"></span><b>Monatlich</b><span>Fenster innen</span></div><div class="plan-row"><span class="dot" style="background:#B9DEC8"></span><b>Quartal</b><span>Teppich-Tiefenreinigung</span></div><div class="plan-row"><span class="dot" style="background:#0F2A1D"></span><b>Zeit</b><span>ab 18:30, festes Team</span></div></div><p class="hand note">Diskret nach Feierabend</p></div></div>
+    <div class="story-txt">
+      <h2 class="h2">Für Kanzleien, Praxen und Zuhause.</h2>
+      <p class="muted-lg">In Kanzleien und Praxen zählen Diskretion und feste Zeiten: Unsere Partner reinigen nach Feierabend, mit festem Team und Schlüsselprotokoll. Zuhause gilt bei der Endreinigung: Mit Abnahmegarantie kommt die Firma nochmals, falls die Verwaltung etwas beanstandet.</p>
+      <div class="checklist" id="checklist">
+        <div class="cl-head"><b>Checkliste vor der Anfrage</b><span class="pill blue tnum" id="clCount">0 von 8 erledigt</span></div>
+        <div class="cl-group"><span class="when">Für alle</span><label><input type="checkbox" id="cl1"> Fläche und Anzahl Räume notieren</label><label><input type="checkbox" id="cl2"> Fotos von Böden, Sanitär und Fenstern machen</label></div><div class="cl-group"><span class="when">Büro, Kanzlei, Praxis</span><label><input type="checkbox" id="cl3"> Reinigungszeiten festlegen (z. B. nach 18 Uhr)</label><label><input type="checkbox" id="cl4"> Schlüsselübergabe und Alarm klären</label><label><input type="checkbox" id="cl5"> Vertrauliche Bereiche definieren</label></div><div class="cl-group"><span class="when">Endreinigung</span><label><input type="checkbox" id="cl6"> Abgabetermin mit der Verwaltung fixieren</label><label><input type="checkbox" id="cl7"> Abnahmegarantie vereinbaren</label></div><div class="cl-group"><span class="when">Danach</span><label><input type="checkbox" id="cl8"> Abnahmeprotokoll prüfen und unterschreiben</label></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="k-reviews" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Beispiele</span><h2>Typische Reinigungsaufträge und was sie kosten</h2><p>Typische Anfragen mit unverbindlichen Richtpreisen.</p></div>
+    <div class="examples"><div class="example"><i class="ic" data-i="building"></i><p>Anwaltskanzlei in Zug, 180 m², Reinigung 2× pro Woche nach Feierabend</p><div class="pr"><span>Richtpreis pro Monat</span><b class="tnum">CHF 1'180–1'600</b></div></div><div class="example"><i class="ic" data-i="sparkle"></i><p>Endreinigung 3.5-Zimmer-Wohnung in Zürich mit Abnahmegarantie</p><div class="pr"><span>Richtpreis</span><b class="tnum">CHF 830–1'120</b></div></div><div class="example"><i class="ic" data-i="medical"></i><p>Arztpraxis in Bern, 220 m², tägliche Reinigung</p><div class="pr"><span>Richtpreis pro Monat</span><b class="tnum">CHF 3'390–4'590</b></div></div></div>
+  </div>
+</section>
+
+<section class="sec" id="k-prices" style="padding-top:0">
+  <div class="wrap price-guide">
+    <div>
+      <h2 class="h2">Was kostet eine Endreinigung?</h2>
+      <p class="muted-lg">Richtwerte für die Endreinigung einer Wohnung inklusive Küche, Bad und Fenster. Büroreinigung wird meist pro Monat offeriert.</p>
+      <a class="btn btn-primary" href="#anfrage" style="margin-top:22px">Genauen Preis erfahren <i class="ic" data-i="arrow"></i></a>
+    </div>
+    <div>
+      <div class="tbl-wrap"><table class="pt"><thead><tr><th>Wohnung</th><th>Endreinigung</th><th>Mit Abnahmegarantie</th></tr></thead><tbody><tr><td><b>1–1.5 Zimmer</b></td><td class="tnum">380–520</td><td class="tnum">440–600</td></tr><tr><td><b>2–2.5 Zimmer</b></td><td class="tnum">550–750</td><td class="tnum">640–860</td></tr><tr><td><b>3–3.5 Zimmer</b></td><td class="tnum">720–980</td><td class="tnum">830–1'120</td></tr><tr><td><b>4–4.5 Zimmer</b></td><td class="tnum">940–1'260</td><td class="tnum">1'080–1'450</td></tr><tr><td><b>5+ Zimmer / Haus</b></td><td class="tnum">1'280–1'720</td><td class="tnum">1'470–1'980</td></tr></tbody></table></div>
+      <p class="small">Unverbindliche Richtwerte in CHF inkl. MwSt.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="k-cities" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2" style="font-size:24px;margin-bottom:16px">Reinigungsfirmen in Ihrer Nähe</h2>
+    <div class="cities"><a href="#anfrage">Reinigung Zürich</a><a href="#anfrage">Reinigung Winterthur</a><a href="#anfrage">Reinigung Bern</a><a href="#anfrage">Reinigung Basel</a><a href="#anfrage">Reinigung Luzern</a><a href="#anfrage">Reinigung Zug</a><a href="#anfrage">Reinigung St. Gallen</a><a href="#anfrage">Reinigung Aarau</a><a href="#anfrage">Reinigung Baden</a><a href="#anfrage">Reinigung Thun</a><a href="#anfrage">Reinigung Chur</a><a href="#anfrage">Reinigung Schaffhausen</a><a href="#anfrage">Reinigung Olten</a><a href="#anfrage">Reinigung Lausanne</a><a href="#anfrage">Reinigung Genf</a><a href="#anfrage">Reinigung Lugano</a></div>
+  </div>
+</section>
+
+
+<section class="sec" id="k-faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">FAQ</span><h2>Häufige Fragen</h2></div>
+    <div class="faq"><details open><summary>Ist reinigungdeal.ch für mich kostenlos?</summary><p>Ja. Für Firmen und Privatkunden ist die Anfrage kostenlos und unverbindlich.</p></details><details><summary>Was bedeutet Abnahmegarantie?</summary><p>Beanstandet die Verwaltung bei der Wohnungsabgabe etwas, reinigt die Firma kostenlos nach. So haben Sie Sicherheit am Abgabetermin.</p></details><details><summary>Reinigen die Firmen auch ausserhalb der Bürozeiten?</summary><p>Ja. Für Kanzleien, Praxen und Büros reinigen viele Partner am Abend, früh morgens oder am Wochenende.</p></details><details><summary>Wie wird die Vertraulichkeit in Kanzleien sichergestellt?</summary><p>Partner für B2B-Aufträge arbeiten mit festen Teams und Schlüsselprotokoll. Auf Wunsch unterschreiben sie eine Vertraulichkeitserklärung.</p></details><details><summary>Kann ich ein Reinigungs-Abo kündigen?</summary><p>Die Konditionen vereinbaren Sie direkt mit der Firma. Viele bieten monatlich kündbare Abos an.</p></details><details><summary>Muss ich ein Angebot annehmen?</summary><p>Nein. Alle Offerten sind unverbindlich.</p></details></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <div><h2>Bereit für saubere Räume?</h2><p>In 3 Minuten ausgefüllt. Offerten meist schon heute.</p></div>
+    <a class="btn btn-white btn-lg" href="#anfrage">Kostenlos Offerten erhalten <i class="ic" data-i="arrow"></i></a>
+  </div>
+  <div class="contact">
+    <div><i class="ic" data-i="phone"></i><p><b>Telefon</b><span>+41 76 274 66 50</span><br><small style="color:var(--muted)">Mo–Fr 09:00–16:00</small></p></div>
+    <div><i class="ic" data-i="mail"></i><p><b>E-Mail</b><span>anfrage@reinigungdeal.ch</span><br><small style="color:var(--muted)">Antwort innert 24 h</small></p></div>
+    <div><i class="ic" data-i="pin"></i><p><b>Adresse</b><span>Churerstrasse 160b, 8808 Pfäffikon SZ, Schweiz</span></p></div>
+  </div>
+</section>
+</main>
+
+<!-- ================================================================ -->
+<!-- ======================== PARTNER VIEW ========================== -->
+<!-- ================================================================ -->
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <span class="logo"><b>reinigung<span>deal</span>.ch</b><small>REINIGUNG. SCHWEIZWEIT.</small></span>
+        <p style="margin-top:14px;font-size:14px;max-width:30em">Ihr Portal für Reinigungsofferten für Büro, Kanzlei, Praxis und Zuhause in der ganzen Schweiz.</p>
+        <div class="family"><span>umzugdeal.ch</span><span>malerdeal.ch</span><span>entsorgungdeal.ch</span><span class="fam-main">auftragdeal.ch · Partner-Portal</span></div>
+      </div>
+      <div><h4>Für Kunden</h4><button class="lnk" data-go="kunden" data-anchor="anfrage">Anfrage starten</button><button class="lnk" data-go="kunden" data-anchor="k-how">So funktioniert's</button><button class="lnk" data-go="kunden" data-anchor="k-services">Leistungen</button><button class="lnk" data-go="kunden" data-anchor="k-faq">FAQ</button></div>
+      <div><h4>Kontakt</h4><span class="lnk">+41 76 274 66 50</span><span class="lnk">anfrage@reinigungdeal.ch</span><span class="lnk">Churerstrasse 160b<br>8808 Pfäffikon SZ<br>Schweiz</span></div>
+    </div>
+    <div class="legal"><span>© 2026 reinigungdeal.ch</span><span>Datenschutz · AGB · <button type="button" class="lnk-imp" data-imp>Impressum</button> · <button type="button" class="lnk-imp" data-cookies>Cookie-Einstellungen</button> · DE / FR / IT / EN</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-primary" id="mbarBtn" href="#anfrage">Kostenlos Offerten erhalten</a></div>
+
+<!-- Drawer -->
+
+
+
+<div class="modal imp" id="impModal" role="dialog" aria-modal="true" aria-labelledby="impTitle" hidden>
+  <button type="button" class="x" id="impClose" aria-label="Schliessen"><i class="ic" data-i="x"></i></button>
+  <h3 id="impTitle">Impressum</h3>
+  <h4>Betreiberin</h4>
+  <p>Dritivo AG (in Gründung)<br>Churerstrasse 160b<br>8808 Pfäffikon SZ<br>Schweiz</p>
+  <h4>Kontakt</h4>
+  <p>E-Mail: <a href="mailto:anfrage@reinigungdeal.ch">anfrage@reinigungdeal.ch</a><br>Telefon: +41 76 274 66 50</p>
+  <h4>Status</h4>
+  <p>Die Dritivo AG befindet sich in Gründung. Angaben zum Handelsregistereintrag, zur UID und zu den Vertretungsberechtigten werden nach der Eintragung ergänzt.</p>
+  <h4>Haftungsausschluss</h4>
+  <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen. Für Inhalte externer Links sind ausschliesslich deren Betreiber verantwortlich.</p>
+  <h4>Urheberrecht</h4>
+  <p>Texte, Grafiken und Gestaltung dieser Website sind urheberrechtlich geschützt. Eine Verwendung, Vervielfältigung oder Weitergabe bedarf der vorherigen schriftlichen Zustimmung.</p>
+</div>
+<div class="modal-bg" id="mbg"></div>
+<div class="cookie" id="cookieBox" role="dialog" aria-labelledby="ckT" hidden>
+  <b id="ckT">Cookies &amp; Datenschutz</b>
+  <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Lokal gespeichert wird nur Ihre Auswahl zu diesem Hinweis. Die Schriftarten werden von Google Fonts geladen. Wenn Sie das Formular absenden, übermitteln wir Ihre Angaben per E-Mail an unser Team.</p>
+  <button type="button" class="btn btn-primary" id="ckOk">Verstanden</button>
+</div>
+<div class="toast" id="toast"><i class="ic" data-i="check"></i><span id="toastT"></span></div>
+
+<script>
+(function(){
+/* ---------- Icons ---------- */
+const I={
+ truck:'<path d="M2 6h12v10H2z"/><path d="M14 9h4.5L22 12.5V16h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>',
+ house:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ sparkle:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/>',
+ building:'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/>',
+ piano:'<rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 5v8M12 5v8M16 5v8M3 13h18"/>',
+ store:'<path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v1.5a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v8h14v-8"/>',
+ trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/><path d="M10 11v6M14 11v6"/>',
+ box:'<path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/>',
+ van:'<path d="M2 7h13l4 4h3v6H2z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+ shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ percent:'<path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+ check:'<path d="M5 12.5l4.5 4.5L19 7"/>',
+ phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+ pin:'<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+ camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+ users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 19"/>',
+ file:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>',
+ calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+ bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+ chat:'<path d="M4 5h16v11H9l-5 4z"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+ grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+ x:'<path d="M6 6l12 12M18 6L6 18"/>',
+ star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+ apple:'<path d="M16 3c-1.2.1-2.6.9-3.3 2-.7 1-.9 2.1-.8 3 1.3 0 2.6-.8 3.3-1.9.7-1 1-2 .8-3.1z"/><path d="M12 8.5c-1 0-2-.6-3-.6-2.3 0-4 2-4 5.2 0 3.6 2.4 7.9 4.3 7.9 1 0 1.5-.6 2.7-.6s1.6.6 2.7.6c1.4 0 2.8-2.6 3.3-4.2-1.7-.7-2.5-2-2.5-3.6 0-1.5.8-2.6 2-3.3-.8-1.1-2-1.7-3.2-1.7-1 0-1.6.6-2.3.3z"/>',
+ play:'<path d="M5 3.5v17l15-8.5z"/><path d="M5 3.5l10 10M5 20.5l10-10"/>',
+ roller:'<rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2v5h-8v3"/><rect x="10.5" y="14" width="3" height="7" rx="1"/>',
+ key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/>',
+ door:'<path d="M5 21V3h12v18"/><path d="M3 21h16"/><circle cx="14" cy="12" r="1"/>',
+ stairs:'<path d="M3 20h5v-5h5v-5h5V5h3"/>',
+ window:'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/>',
+ layers:'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+ fence:'<path d="M5 21V6l2-3 2 3v15M15 21V6l2-3 2 3v15M3 10h18M3 16h18"/>',
+ trowel:'<path d="M14 4l6 6-8 3-1-1z"/><path d="M11 12l-7 7"/>',
+ leaf:'<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/>',
+ medical:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/>',
+ bucket:'<path d="M5 8h14l-1.5 12h-11z"/><path d="M5 8a7 4 0 0 1 14 0"/>',
+ user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+ plus:'<path d="M12 5v14M5 12h14"/>',
+ lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+ send:'<path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/>'
+};
+function paintIcons(root){(root||document).querySelectorAll('i.ic[data-i]').forEach(el=>{if(el.firstChild)return;el.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+(I[el.dataset.i]||'')+'</svg>';});}
+const ic=n=>'<i class="ic" data-i="'+n+'"></i>';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const chf=n=>'CHF '+Math.round(n).toLocaleString('de-CH').replace(/[’,]/g,"'");
+function toast(t){$('#toastT').textContent=t;const el=$('#toast');el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),2800);}
+
+/* ---------- Views ---------- */
+document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(!b)return;e.preventDefault();
+  const t=b.dataset.anchor?document.getElementById(b.dataset.anchor):null;if(t)t.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollTo({top:0,behavior:'smooth'});});
+// mobile bar visibility
+const mbar=$('#mbar');
+function onScroll(){const y=window.scrollY;mbar.classList.toggle('show',y>500);document.body.classList.toggle('has-mbar',y>500);}
+window.addEventListener('scroll',onScroll,{passive:true});
+
+/* ---------- Services ---------- */
+const SVC=[
+ {"k": "end", "n": "Endreinigung", "d": "Mit Abnahmegarantie", "i": "sparkle", "tag": "Beliebt", "long": "Wohnungsreinigung beim Auszug. Mit Abnahmegarantie reinigt die Firma nach, falls die Verwaltung etwas beanstandet."},
+ {"k": "buero", "n": "Büroreinigung", "d": "Kanzlei, Agentur, Büro", "i": "building", "tag": "B2B", "long": "Regelmässige Reinigung von Büros und Kanzleien, diskret ausserhalb der Bürozeiten."},
+ {"k": "praxis", "n": "Praxisreinigung", "d": "Arzt, Zahnarzt, Therapie", "i": "medical", "long": "Hygienische Reinigung von Behandlungsräumen, Wartezimmer und Sanitär, auf Wunsch mit Desinfektion."},
+ {"k": "wohnung", "n": "Wohnungsreinigung", "d": "Regelmässig zuhause", "i": "house", "long": "Wöchentliche oder zweiwöchentliche Reinigung Ihrer Wohnung durch ein festes Team."},
+ {"k": "unterhalt", "n": "Unterhaltsreinigung", "d": "Gewerbe und Verkauf", "i": "calendar", "long": "Laufende Reinigung von Gewerbeflächen, Läden und Showrooms nach festem Plan."},
+ {"k": "fenster", "n": "Fensterreinigung", "d": "Glas, Rahmen, Storen", "i": "window", "long": "Fenster, Rahmen und Storen innen und aussen, auch für grosse Glasflächen."},
+ {"k": "treppe", "n": "Treppenhaus", "d": "Für Verwaltungen", "i": "stairs", "long": "Treppenhausreinigung in Mehrfamilienhäusern im festen Rhythmus."},
+ {"k": "grund", "n": "Grundreinigung", "d": "Frühling, Einzug", "i": "bucket", "long": "Gründliche Reinigung aller Räume inklusive Schränke, Küche und Fenster."},
+ {"k": "bau", "n": "Baureinigung", "d": "Nach Umbau", "i": "trowel", "long": "Grob- und Feinreinigung nach Umbau oder Neubau, bereit für den Bezug."}
+];
+const SIZES=['1–1.5 Zi','2–2.5 Zi','3–3.5 Zi','4–4.5 Zi','5+ Zi / Haus'];
+const BASE=[650,950,1350,1800,2500];
+const S={svc:null,size:null,clean:null,extras:new Set(),flex:'fix',photos:[],items:{"Zimmer/Büros": 3, "Bäder/WC": 1, "Küchen": 1, "Fenster": 8, "Arbeitsplätze": 0, "Balkone": 1},step:1};
+
+const g=$('#svcGrid');
+g.innerHTML=SVC.map(s=>`<button type="button" class="svc" data-k="${s.k}">${s.tag?'<span class="tag">'+s.tag+'</span>':''}${ic(s.i)}<span>${s.n}</span><small>${s.d}</small></button>`).join('');
+g.addEventListener('click',e=>{const b=e.target.closest('.svc');if(!b)return;selectSvc(b.dataset.k);setTimeout(()=>go(2),180);});
+function selectSvc(k){S.svc=k;$$('#svcGrid .svc').forEach(x=>x.classList.toggle('on',x.dataset.k===k));$('#err-svc').classList.remove('on');configDetails();}
+
+$('#svcList').innerHTML=SVC.map(s=>`<div class="svc-card">${ic(s.i)}<h3>${s.n}</h3><p>${s.long}</p><button type="button" data-start="${s.k}">Offerte anfordern ${ic('arrow')}</button></div>`).join('');
+$('#svcList').addEventListener('click',e=>{const b=e.target.closest('[data-start]');if(!b)return;selectSvc(b.dataset.start);go(2);$('#anfrage').scrollIntoView({behavior:'smooth'});});
+
+function chipGroup(el,opts,{multi=false,get,set}){
+  el.innerHTML=opts.map(o=>`<button type="button" class="chip" data-v="${o}">${o}</button>`).join('');
+  const sync=()=>el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',multi?get().has(c.dataset.v):get()===c.dataset.v));
+  el.onclick=e=>{const c=e.target.closest('.chip');if(!c)return;const v=c.dataset.v;
+    if(multi){const s=get();s.has(v)?s.delete(v):s.add(v);}else set(v);sync();estimate();};
+  sync();
+}
+function seg(id,cb){const el=$(id);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));cb&&cb(b.dataset.v);estimate();});}
+const segVal=id=>($(id+' button.on')||{}).dataset?.v;
+
+const SZ={"end": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "wohnung": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "grund": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "buero": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "praxis": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "unterhalt": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "fenster": ["bis 10 Fenster", "11–25 Fenster", "26–50 Fenster", "50+ Fenster"], "treppe": ["1–2 Etagen", "3–4 Etagen", "5–6 Etagen", "7+ Etagen"], "bau": ["bis 100 m²", "100–250 m²", "250–500 m²", "500+ m²"]},SZL={"end": "Wohnungsgrösse", "wohnung": "Wohnungsgrösse", "grund": "Wohnungsgrösse", "buero": "Bürofläche", "praxis": "Praxisfläche", "unterhalt": "Fläche", "fenster": "Anzahl Fenster", "treppe": "Grösse Treppenhaus", "bau": "Fläche"},UMF={"end": ["Endreinigung", "Mit Abnahmegarantie"], "wohnung": ["Wöchentlich", "Alle 2 Wochen", "Monatlich"], "buero": ["2× pro Woche", "Täglich", "Wöchentlich", "Einmalig"], "praxis": ["Täglich", "2× pro Woche", "Wöchentlich", "Einmalig"], "unterhalt": ["Wöchentlich", "2× pro Woche", "Täglich", "Einmalig"], "treppe": ["Wöchentlich", "Alle 2 Wochen"], "fenster": ["Innen", "Innen + aussen"]},EX={"end": ["Fenster inkl. Storen", "Backofen & Kühlschrank", "Keller/Estrich", "Balkon"], "buero": ["Fensterreinigung", "Kaffeeküche", "Abfallentsorgung", "Ausserhalb Bürozeiten"], "praxis": ["Desinfektion Flächen", "Wartezimmer", "Ausserhalb Sprechzeiten"], "wohnung": ["Bügeln", "Fenster", "Eigene Reinigungsmittel"], "unterhalt": ["Teppichreinigung", "Sanitär verstärkt", "Abfallentsorgung"], "treppe": ["Lift reinigen", "Eingang und Umgebung"], "fenster": ["Storen", "Rahmen", "Wintergarten"], "grund": ["Fenster", "Teppiche", "Polstermöbel"], "bau": ["Grobreinigung", "Feinreinigung", "Fenster"]},BASES={"end": [450, 650, 850, 1100, 1500], "wohnung": [110, 140, 170, 210, 260], "grund": [350, 500, 700, 900, 1250], "buero": [90, 160, 280, 480, 800], "praxis": [110, 190, 320, 540, 900], "unterhalt": [90, 160, 280, 480, 800], "treppe": [80, 120, 160, 220], "fenster": [180, 380, 700, 1200], "bau": [600, 1300, 2400, 3800]},MULT={"Mit Abnahmegarantie": 1.15, "Einmalig": 1.3, "Innen + aussen": 1.7},PER={"Täglich": 21, "2× pro Woche": 8.7, "Wöchentlich": 4.3, "Alle 2 Wochen": 2.2, "Monatlich": 1};
+function configDetails(){
+  const k=S.svc;
+  $('#sizeLbl').firstChild.textContent=(SZL[k]||'Grösse')+' ';
+  S.size=null;
+  chipGroup($('#f-size'),SZ[k],{get:()=>S.size,set:v=>{S.size=v;$('#err-size').classList.remove('on');}});
+  const u=UMF[k];$('#g-clean').hidden=!u;S.clean=u?u[0]:null;
+  if(u)chipGroup($('#f-clean'),u,{get:()=>S.clean,set:v=>S.clean=v});
+  S.extras=new Set();
+  chipGroup($('#f-extra'),EX[k]||[],{multi:true,get:()=>S.extras});
+  $('#addrB').hidden=true;$('#addrALbl').textContent='Objektadresse';
+  estimate();
+}
+function estimate(){
+  if(!S.svc)return;
+  const idx=Math.max(0,$$('#f-size .chip').findIndex(c=>c.classList.contains('on')));
+  let v=(BASES[S.svc]||[0])[idx]||0,suf='';
+  const opt=(!$('#g-clean').hidden&&S.clean)?S.clean:null;
+  if(opt&&MULT[opt])v*=MULT[opt];
+  if(opt&&PER[opt]){v*=PER[opt];suf=' pro Monat';}
+  v+=S.extras.size*Math.max(40,v*.06);
+  if(segVal('#a-lift')==='__')v*=1.08;
+  const r=x=>Math.round(x/10)*10;
+  S.est=[r(v*.85),r(v*1.15)];
+  $('#estVal').textContent=S.size?chf(S.est[0])+' – '+chf(S.est[1]).replace('CHF ','')+suf:'Grösse wählen für Schätzung';
+}
+seg('#f-flex',v=>S.flex=v);seg('#a-lift');seg('#b-lift');seg('#c-sal');seg('#c-way');
+['#a-fl','#b-fl'].forEach(s=>$(s).addEventListener('change',estimate));
+
+// date default
+const d=new Date();d.setDate(d.getDate()+21);$('#f-date').value=d.toISOString().slice(0,10);$('#f-date').min=new Date().toISOString().slice(0,10);
+
+// photos
+S.files=[];
+$('#f-photos').addEventListener('change',e=>{
+  [...e.target.files].slice(0,6-S.photos.length).forEach(f=>{const r=new FileReader();r.onload=()=>{S.photos.push(r.result);S.files.push(f);renderThumbs();};r.readAsDataURL(f);});
+  e.target.value='';
+});
+function renderThumbs(){$('#thumbs').innerHTML=S.photos.map((p,i)=>`<div><img src="${p}" alt="Foto ${i+1}"><button type="button" data-rm="${i}" aria-label="Foto entfernen">×</button></div>`).join('');}
+$('#thumbs').addEventListener('click',e=>{const b=e.target.closest('[data-rm]');if(!b)return;S.photos.splice(+b.dataset.rm,1);S.files.splice(+b.dataset.rm,1);renderThumbs();});
+function renderItems(){$('#items').innerHTML=Object.entries(S.items).map(([k,v])=>`<div class="item"><span>${k}</span><div class="stepper"><button type="button" data-it="${k}" data-d="-1" aria-label="${k} weniger">−</button><output class="tnum">${v}</output><button type="button" data-it="${k}" data-d="1" aria-label="${k} mehr">+</button></div></div>`).join('');}
+$('#items').addEventListener('click',e=>{const b=e.target.closest('[data-it]');if(!b)return;const k=b.dataset.it;S.items[k]=Math.max(0,S.items[k]+(+b.dataset.d)*(k==='Arbeitsplätze'?5:1));renderItems();});
+renderItems();
+
+/* ---------- Wizard nav ---------- */
+const TITLES=["Was dürfen wir für Sie reinigen?", "Erzählen Sie uns mehr", "Wo ist das Objekt?", "Fotos und Details", "Fast geschafft!"];
+function setSteps(sel,n,total){$$(sel+' .st').forEach((s,i)=>{s.classList.toggle('done',i<n-1);s.classList.toggle('cur',i===n-1);});}
+function go(n){
+  S.step=n;
+  $$('#wz .pane').forEach(p=>p.classList.toggle('on',+p.dataset.step===n));
+  const done=n===6;
+  $('#wzFoot').hidden=done;$('#wzSteps').hidden=done;
+  $('#wzTitle').textContent=done?'Anfrage gesendet':TITLES[n-1];
+  $('#wzSub').textContent=done?'Wir melden uns in Kürze':'Kostenlos Offerten erhalten, Schritt '+n+' von 5';
+  $('#wzBack').hidden=n===1;
+  $('#wzNext').innerHTML=n===5?'Anfrage kostenlos senden '+ic('send'):n===4?'Weiter '+ic('arrow'):'Weiter '+ic('arrow');
+  setSteps('#wzSteps',n);paintIcons($('#wz'));
+  if(n===2)estimate();
+}
+function req(id,errId,test){const el=$(id);const ok=test?test(el.value):el.value.trim().length>1;el.classList.toggle('err',!ok);$(errId).classList.toggle('on',!ok);return ok;}
+function validate(n){
+  if(n===1){if(!S.svc){$('#err-svc').classList.add('on');return false;}return true;}
+  if(n===2){let ok=true;if(!$('#f-date').value){ok=false;$('#err-date').classList.add('on');}else $('#err-date').classList.remove('on');if(!S.size){ok=false;$('#err-size').classList.add('on');}return ok;}
+  if(n===3){let ok=req('#a-plz','#err-a');if(!$('#addrB').hidden)ok=req('#b-plz','#err-b')&&ok;return ok;}
+  if(n===5){
+    let ok=req('#c-fn','#err-fn');ok=req('#c-ln','#err-ln')&&ok;
+    ok=req('#c-em','#err-em',v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))&&ok;
+    ok=req('#c-ph','#err-ph',v=>v.replace(/\D/g,'').length>=9)&&ok;
+    const c=$('#c-ok').checked;$('#err-ok').classList.toggle('on',!c);return ok&&c;}
+  return true;
+}
+$('#wzNext').addEventListener('click',()=>{if(!validate(S.step)){const e=$('#wz .pane.on .err, #wz .pane.on .errmsg.on');e&&e.scrollIntoView({block:'center',behavior:'smooth'});return;}if(S.step===5){submitReq();return;}go(S.step+1);});
+$('#wzBack').addEventListener('click',()=>go(Math.max(1,S.step-1)));
+$('#wz').addEventListener('submit',e=>e.preventDefault());
+$('#wz').addEventListener('input',e=>{if(e.target.classList.contains('err'))e.target.classList.remove('err');});
+$('#wzReset').addEventListener('click',()=>{S.svc=null;$$('#svcGrid .svc').forEach(x=>x.classList.remove('on'));['#c-fn','#c-ln','#c-em','#c-ph','#c-note','#a-str','#a-plz','#b-str','#b-plz'].forEach(s=>$(s).value='');$('#c-ok').checked=false;S.photos=[];S.files=[];renderThumbs();$('#err-send').classList.remove('on');go(1);});
+
+function fmtDate(v){const [y,m,dd]=v.split('-');return dd+'.'+m+'.'+y;}
+const MAIL='anfrage@reinigungdeal.ch';
+const ENDPOINT='https://formsubmit.co/ajax/'+MAIL;
+/* Später: Adresse der API von auftragdeal.ch eintragen, z. B. 'https://auftragdeal.ch/api/anfragen'.
+   Solange leer, landet alles nur per E-Mail bei uns. Sobald gesetzt, geht jede Anfrage zusätzlich an die API (E-Mail bleibt als Backup). */
+const API_URL='';
+function shrink(file,max=1400,q=.72){return new Promise(res=>{const img=new Image(),u=URL.createObjectURL(file);
+  img.onload=()=>{const k=Math.min(1,max/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+    c.toBlob(bl=>{URL.revokeObjectURL(u);res(bl?new File([bl],file.name.replace(/\.\w+$/,'')+'.jpg',{type:'image/jpeg'}):null);},'image/jpeg',q);};
+  img.onerror=()=>{URL.revokeObjectURL(u);res(file.size<1.5e6?file:null);};img.src=u;});}
+async function submitReq(){
+  const btn=$('#wzNext'),old=btn.innerHTML,err=$('#err-send');err.classList.remove('on');
+  btn.disabled=true;btn.textContent='Wird gesendet …';
+  const ref='RD-'+(2600+Math.floor(Math.random()*399));
+  const svc=SVC.find(s=>s.k===S.svc);
+  const v=id=>$(id).value.trim();
+  const single=$('#addrB').hidden;
+  const sal=($('#c-sal .on')||{dataset:{v:''}}).dataset.v;
+  const way=($('#c-way .on')||{dataset:{}}).dataset.v||'keine Angabe';
+  const items=Object.entries(S.items).filter(([,n])=>n>0).map(([k,n])=>k+' '+n).join(', ')||'keine Angaben';
+  const city=v('#a-plz').replace(/^\d{4}\s*/,'');
+  const fd=new FormData();
+  const D={ref};const F=(k,val)=>{fd.append(k,val);D[k]=val;};
+  F('Anfragenummer',ref);F('Leistung',svc.n);F('Objektgrösse',S.size||'–');
+  F('Wunschtermin',fmtDate($('#f-date').value)+(S.flex!=='fix'?' ('+S.flex+' Tage)':''));
+  F('Adresse',(v('#a-str')?v('#a-str')+', ':'')+v('#a-plz'));
+  if(!single)F('Zieladresse',(v('#b-str')?v('#b-str')+', ':'')+v('#b-plz'));
+  F('Etage / Lift',$('#a-fl').value+', '+(segVal('#a-lift')==='ja'?'Lift vorhanden':'kein Lift'));
+  if(S.clean&&!$('#g-clean').hidden)F('Reinigungsart',S.clean);
+  F('Räume und Details',items);
+  F('Extras',[...S.extras].join(', ')||'–');
+  F('Hinweise',v('#c-note')||'–');
+  F('Richtpreis (Schätzung)',S.est?chf(S.est[0])+' – '+chf(S.est[1]).replace('CHF ',''):'–');
+  F('Name',(sal+' '+v('#c-fn')+' '+v('#c-ln')).trim());
+  F('email',v('#c-em'));
+  F('Telefon',v('#c-ph'));
+  F('Bevorzugter Kontakt',way);
+  let sent=0;
+  for(const f of S.files.slice(0,6)){const b=await shrink(f);if(b){fd.append('attachment',b,b.name);sent++;}}
+  F('Anzahl Fotos',sent+' von '+S.files.length+' angehängt');
+  fd.append('_subject','Neue Reinigungsanfrage '+ref+' · '+svc.n+' · '+city);
+  fd.append('_template','table');fd.append('_captcha','false');fd.append('_honey',$('#hp').value);
+  fd.append('_autoresponse','Guten Tag '+v('#c-fn')+'\n\nVielen Dank für Ihre Anfrage ('+ref+') bei reinigungdeal.ch. Wir haben sie erhalten und melden uns innert 24 Stunden bei Ihnen.\n\nFreundliche Grüsse\nreinigungdeal.ch');
+  try{
+    const r=await fetch(ENDPOINT,{method:'POST',body:fd,headers:{Accept:'application/json'}});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||j.success===false||j.success==='false')throw new Error(j.message||('HTTP '+r.status));
+  }catch(e){
+    err.innerHTML='Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:'+MAIL+'">'+MAIL+'</a>.';
+    err.classList.add('on');btn.disabled=false;btn.innerHTML=old;paintIcons(btn);return;
+  }
+  if(API_URL){fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(D)}).catch(()=>{});}
+  btn.disabled=false;btn.innerHTML=old;paintIcons(btn);
+  $('#okRef').textContent=ref;$('#okName').textContent=v('#c-fn');$('#okMail').textContent=v('#c-em');
+  go(6);toast('Anfrage '+ref+' gesendet');
+  $('#anfrage').scrollIntoView({behavior:'smooth'});
+}
+
+// accept buttons in showcase
+$$('.accept').forEach(b=>b.addEventListener('click',()=>{$$('.accept').forEach(x=>{x.classList.remove('done');x.textContent='Annehmen';});b.classList.add('done');b.textContent='✓ Angenommen';toast('Beispiel: Angebot angenommen');}));
+
+/* ---------- Impressum ---------- */
+function impOpen(){$('#impModal').hidden=false;$('#mbg').classList.add('on');}
+function impClose(){$('#impModal').hidden=true;$('#mbg').classList.remove('on');}
+document.addEventListener('click',e=>{if(e.target.closest('[data-imp]')){e.preventDefault();impOpen();}});
+$('#impClose').onclick=impClose;$('#mbg').addEventListener('click',impClose);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')impClose();});
+if(location.hash==='#impressum')impOpen();
+
+/* ---------- Cookie-Hinweis ---------- */
+(function(){const KEY='rd_cookie_notice',box=$('#cookieBox');let seen=false;
+  try{seen=localStorage.getItem(KEY)==='1';}catch(e){}
+  box.hidden=seen;
+  $('#ckOk').onclick=()=>{box.hidden=true;try{localStorage.setItem(KEY,'1');}catch(e){}};
+  document.addEventListener('click',e=>{if(e.target.closest('[data-cookies]')){e.preventDefault();box.hidden=false;}});
+})();
+
+/* ---------- Init ---------- */
+paintIcons();go(1);
+})();
+</script>
+
+</body>
+</html>
